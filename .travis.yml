@@ -15,7 +15,7 @@ after_success:
     - docker build -t kissta/fibonacci-worker ./worker
 
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-
+#push to dockerhub
 - docker push kissta/fibonacci-client
 - docker push kissta/fibonacci-nginx
 - docker push kissta/fibonacci-server
